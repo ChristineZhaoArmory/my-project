@@ -8,6 +8,12 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+
+  # Allows external webhook trigger
+  repository_dispatch:
+    types:
+      - webhook
 
 jobs:
   build-java:
